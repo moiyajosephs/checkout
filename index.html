@@ -11,16 +11,47 @@
             <div class= "name" >
                 <div class= "fname">
                     <label for="fname">First name:</label><br>
-                    <input type="text" id="fname" name="fname" value="">
+                    <input type="text" id="fname" name="fname" value="" required>
                 </div>
                 <div class="lname">
                     <label for="lname">Last name:</label><br>
-                    <input type="text" id="lname" name="lname" value=""><br><br>
+                    <input type="text" id="lname" name="lname" value="" required><br><br>
                 </div>
             </div>
-            <div>
+            <div class="username">
                 <label for="username">Username:</label><br>
-                <input type="text" id="username" name="username" value=""><br>
+                <input type="text" id="username" name="username" value="" required><br>
+            </div>
+            <div class="email">
+                <label for="email">Email:</label><br>
+                <input type="text" id="email" name="email" value=""><br>
+            </div>
+            <div class="address">
+                <label for="address">Address</label>
+                <input type="text" id="address" required><br>
+                <label for="address2">Address 2(Optional)</label>
+                <input type="text" id="address2">
+            </div>
+            <div class="location">
+                <div> <!--Country-->
+                    <label for="country">Country</label>
+                    <select id="country">
+                        <option value>Choose...</option>
+                        <option>United States</option>
+                        <option>Canada</option>
+                    </select>
+                </div>
+                <div> <!--State-->
+                    <label for="state">State</label>
+                    <select id="state">
+                        <option value>Choose...</option>
+                        <option>New York</option>
+                        <option>New Jersey</option>
+                    </select>
+                </div>
+                <div> <!--Zip-->
+
+                </div>
             </div>
 
         </form>
