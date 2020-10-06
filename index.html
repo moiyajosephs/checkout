@@ -28,23 +28,30 @@
                     </div>
                 </div>
 
+                <!--Username-->
                 <div class="row">
                     <label for="username">Username:</label><br>
                     <input type="text" id="username" name="username" value="" required><br>
                 </div>
 
-                <div class="email">
+                <!--Email-->
+                <div class="row">
                     <label for="email">Email:</label><br>
                     <input type="text" id="email" name="email" value=""><br>
                 </div>
-                <div class="address">
+                <br>
+                <!--Address-->
+                <div class="row">
                     <label for="address">Address</label>
                     <input type="text" id="address" required><br>
                     <label for="address2">Address 2(Optional)</label>
                     <input type="text" id="address2">
                 </div>
-                <div class="location">
-                    <div> <!--Country-->
+                <br>
+                <!--Location-->
+                <div class="row">
+                    <!--Country-->
+                    <div class="col"> 
                         <label for="country">Country</label>
                         <select id="country">
                             <option value>Choose...</option>
@@ -52,7 +59,9 @@
                             <option>Canada</option>
                         </select>
                     </div>
-                    <div> <!--State-->
+
+                    <!--State-->
+                    <div class= "col"> 
                         <label for="state">State</label>
                         <select id="state">
                             <option value>Choose...</option>
@@ -60,51 +69,70 @@
                             <option>New Jersey</option>
                         </select>
                     </div>
-                    <div> <!--Zip-->
+
+                    <!--Zip-->
+                    <div class="col">
                         <label for="zip">ZipCode</label>
                         <input type="text" id="zip" name="zip" value="" required><br>
                     </div>
+                </div>
+
+                <div class="row">
                     <!----Seperate the two fields-->
-                    <div>
-                        <div><!--Shipping address is same checkbox-->
+                    <div class= "row">
+                        <div class="col"><!--Shipping address is same checkbox-->
                             <input type="checkbox" id="ship-addr" name="ship-addr" required>
                             <label for="ship-addr">Shipping address is the same as my billing address</label>
                         </div>
-                        <div><!--Save information-->
+                        <div class="col"><!--Save information-->
                             <input type="checkbox" id="save-info" name="save-info" required>
                             <label for="save-info">Save this information for next time</label>
                         </div>
                     </div>
+                </div>
+                <br>
+                <h1>Payment</h1>
+                <div class="row">
+
                     <!--Payment information-->
-                    <div class="Credit">
+                    <!--Credit-->
+                    <div class="row">
                         <input id="credit" name="payment" type="radio" required>
                         <label for="credit">Credit Card</label>
                     </div>
-                    <div class="Debit">
+                    <!--Debit-->
+                    <div class="row">
                         <input id="debit" name="payment" type="radio" required>
                         <label for="credit">Debit Card</label>
                     </div>
-                    <div class="Paypal">
+                    <!--Paypal-->
+                    <div class="row">
                         <input id="paypal" name="payment" type="radio" required>
                         <label for="paypal">Paypal</label>
                     </div>
-                    <div class="card-name">
-                        <div> <!--Name on card-->
+                </div>
+
+                <div class="row">
+
+                    <!--Card-->
+                    <div class="row">
+                        <div class="col"> <!--Name on card-->
                             <label for="card-name">Name on card</label>
                             <input id="card-name" type="text" required>
 
                         </div>
-                        <div> <!--Credit card number-->
+                        <div class="col"> <!--Credit card number-->
                             <label for="card-number">Credit Card Number</label>
                             <input id="card-number" type="text" required>
                         </div>
                     </div>
-                    <div class="card-info">
-                        <div><!--Expiration-->
+
+                    <div class="row">
+                        <div class="col"><!--Expiration-->
                             <label for="expiration">Expiration</label>
                             <input id="expiration" type="text" required>
                         </div>
-                        <div><!--CVV-->
+                        <div class="col"><!--CVV-->
                             <label for="cvv">CVV</label>
                             <input id="cvv" type="text" required>
                         </div>
