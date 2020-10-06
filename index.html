@@ -33,7 +33,7 @@
                     <label for="username">Username:</label><br>
                     <input type="text" id="username" name="username" value="" required><br>
                 </div>
-
+                <br>
                 <!--Email-->
                 <div class="row">
                     <label for="email">Email:</label><br>
@@ -112,32 +112,32 @@
                     </div>
                 </div>
 
+                
+
+                <!--Card-->
                 <div class="row">
+                    <div class="col"> <!--Name on card-->
+                        <label for="card-name">Name on card</label>
+                        <input id="card-name" type="text" required>
 
-                    <!--Card-->
-                    <div class="row">
-                        <div class="col"> <!--Name on card-->
-                            <label for="card-name">Name on card</label>
-                            <input id="card-name" type="text" required>
-
-                        </div>
-                        <div class="col"> <!--Credit card number-->
-                            <label for="card-number">Credit Card Number</label>
-                            <input id="card-number" type="text" required>
-                        </div>
                     </div>
-
-                    <div class="row">
-                        <div class="col"><!--Expiration-->
-                            <label for="expiration">Expiration</label>
-                            <input id="expiration" type="text" required>
-                        </div>
-                        <div class="col"><!--CVV-->
-                            <label for="cvv">CVV</label>
-                            <input id="cvv" type="text" required>
-                        </div>
+                    <div class="col"> <!--Credit card number-->
+                        <label for="card-number">Credit Card Number</label>
+                        <input id="card-number" type="text" required>
                     </div>
                 </div>
+                <br>
+                <div class="row">
+                    <div class="col"><!--Expiration-->
+                        <label for="expiration">Expiration</label>
+                        <input id="expiration" type="text" required>
+                    </div>
+                    <div class="col"><!--CVV-->
+                        <label for="cvv">CVV</label>
+                        <input id="cvv" type="text" required>
+                    </div>
+                </div>
+               
                 <!--Submit Button-->
                 <div>
                     <button class="submit-button" type="submit">Continue to checkout</button>
