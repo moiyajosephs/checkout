@@ -16,7 +16,7 @@
 
     <h1>Example</h1>
     <body>
-        <form class="needs-validation">
+        <form class="was-validated"> <!--needs-validation-->
             <div class ="container">
                 <div class="row">
                     <div class="col-md-4">
@@ -127,21 +127,18 @@
                         <br>
                         
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="ship-addr" onchange="myFunction()"/>
-                            <label class="form-check-label" for="ship-addr">Shipping address is the same as my billing address</label>
+                            <input class="form-check-input" type="checkbox" id="shipaddr" onchange="myFunction()"/>
+                            <label class="form-check-label" for="shipaddr">Shipping address is the same as my billing address</label>
                         </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="save-info">
-                            <label class="form-check-label" for="save-info">Save this information for next time</label>
-                        </div>
+                        
 
                         <br>
-
+                        <!--Too hide when checked, show when unchecked-->
                         <div class="form-check" id="ship">
                             <h3 class="text-primary">Shipping Address:</h3>
                             <div class="row-md-12">
                                 <label for="address">Address:</label><br>
-                                <input class="form-control" type="text" id="ship-address" value=""><br>
+                                <input class="form-control" type="text" id="shippaddr"><br>
                                 <label for="address2">Address 2(Optional)</label><br>
                                 <input class="form-control" type="text" id="address2" placeholder="Apt. or Suite">
                             </div>
@@ -152,7 +149,7 @@
                                 <div class="col-md-4"> 
                                     <div class="form-group">
                                         <label for="country">Country:</label><br>
-                                        <select class="form-control" id="country">
+                                        <select class="form-control" id="shipcountry">
                                             <option value>Choose...</option>
                                             <option>United States</option>
                                             <option>Canada</option>
@@ -164,7 +161,7 @@
                                 <div class= "col-md-4" > 
                                     <div>
                                         <label for="state">State:</label><br>
-                                        <select class="form-control" id="state">
+                                        <select class="form-control" id="shipstate">
                                             <option value>Choose...</option>
                                             <option>New York</option>
                                             <option>New Jersey</option>
@@ -175,10 +172,14 @@
                                 <!--Zip-->
                                 <div class="col-md-4">
                                     <label for="zip">ZipCode:</label><br>
-                                    <input class="form-control" type="text" id="ship-zip" name="zip" placeholder="ZipCode"><br>
+                                    <input class="form-control" type="text" id="shipzip" name="zip" placeholder="ZipCode"><br>
                                 </div>
                             </div>
 
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="save-info">
+                            <label class="form-check-label" for="save-info">Save this information for next time</label>
                         </div>
 
 
