@@ -35,3 +35,14 @@ function myFunction(){
     }
     
 }
+/*
+function validate(){
+    if(document.myForm.fname.value == "")
+    {
+        alert("please put first name!")
+        document.myForm.fname.focus();
+        return false;
+    }
+    return true;
+}
+*/

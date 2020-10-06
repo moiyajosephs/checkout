@@ -14,9 +14,9 @@
         <h1 class="text-center text-primary display-2">Checkout</h1>
     </head>
 
-    <h1>Example</h1>
+   
     <body>
-        <form class="was-validated"> <!--needs-validation-->
+        <form name="myForm" class="was-validated" novalidate> <!--needs-validation no-validate onsubmit="return(validate());"-->
             <div class ="container">
                 <div class="row">
                     <div class="col-md-4">
@@ -52,14 +52,20 @@
                             </tfoot>
                         </table>
                     </div>
+
+
                     <div class="col-md-8">
                         <h2 class="text-primary">Billing Address</h1>
                         <label for="name">Name:</label><br>
                         <div class= "row" > <!--First Name, Last Name-->
                             <div class="col-md-12 input-group mb-3">
-                                <input type="text" id="name" class="form-control" placeholder="First Name" required>
+                                <input type="text" id="name" class="form-control" placeholder="First Name" name="fname" required>
                                 <input type="text" id ="name" class="form-control" placeholder="Last Name" required>
+                                <div class="invalid-feedback">
+                                    Please enter your name.
+                                </div>
                             </div>
+                            
         
                         </div>
 
@@ -67,6 +73,9 @@
                         <div class="row-md-12">
                             <label for="username">Username:</label><br>
                             <input class="form-control" type="text" id="username" name="username" placeholder="Username" required>
+                            <div class="invalid-feedback">
+                                Please enter your username.
+                            </div>
                         </div>
                         <br>
                         <!--Email-->
@@ -79,15 +88,22 @@
                                 </div>
                                 <br>
                             </div>
+                            <div class="invalid-feedback">
+                                Please enter your email.
+                            </div>
                         </div>
                         <br>
                         <!--Address-->
                         <div class="row-md-12">
                             <label for="address">Address:</label><br>
-                            <input class="form-control" type="text" id="address" required><br>
+                            <input class="form-control" type="text" id="address" required>
+                            <div class="invalid-feedback">
+                                Please enter your address.
+                            </div>
                             <label for="address2">Address 2(Optional)</label><br>
                             <input class="form-control" type="text" id="address2" placeholder="Apt. or Suite">
                         </div>
+                        
                         <br>
                         <!--Location-->
                         <div class="row">
@@ -95,30 +111,40 @@
                             <div class="col-md-4"> 
                                 <div class="form-group">
                                     <label for="country">Country:</label><br>
-                                    <select class="form-control" id="country">
+                                    <select class="form-control" id="country" required>
                                         <option value>Choose...</option>
                                         <option>United States</option>
                                         <option>Canada</option>
                                     </select>
+                                    <div class="invalid-feedback">
+                                        Please enter your country.
+                                    </div>
                                 </div>
+                                
                             </div>
 
                             <!--State-->
                             <div class= "col-md-4"> 
                                 <div>
                                     <label for="state">State:</label><br>
-                                    <select class="form-control" id="state">
+                                    <select class="form-control" id="state" required>
                                         <option value>Choose...</option>
                                         <option>New York</option>
                                         <option>New Jersey</option>
                                     </select>
+                                    <div class="invalid-feedback">
+                                        Please enter your state.
+                                    </div>
                                 </div>
                             </div>
 
                             <!--Zip-->
                             <div class="col-md-4">
                                 <label for="zip">ZipCode:</label><br>
-                                <input class="form-control" type="text" id="zip" name="zip" placeholder="ZipCode" required><br>
+                                <input class="form-control" type="number" id="zip" name="zip" placeholder="ZipCode" required>
+                                <div class="invalid-feedback">
+                                    Please enter your zipcode.
+                                </div>
                             </div>
                         </div>
                         <br>
@@ -138,9 +164,13 @@
                             <h3 class="text-primary">Shipping Address:</h3>
                             <div class="row-md-12">
                                 <label for="address">Address:</label><br>
-                                <input class="form-control" type="text" id="shippaddr"><br>
+                                <input class="form-control" type="text" id="shippaddr">
+                                <div class="invalid-feedback">
+                                    Please enter your shipping address.
+                                </div>
                                 <label for="address2">Address 2(Optional)</label><br>
                                 <input class="form-control" type="text" id="address2" placeholder="Apt. or Suite">
+                            
                             </div>
                             <br>
                             <!--Location-->
@@ -154,6 +184,9 @@
                                             <option>United States</option>
                                             <option>Canada</option>
                                         </select>
+                                        <div class="invalid-feedback">
+                                            Please enter your country.
+                                        </div>
                                     </div>
                                 </div>
     
@@ -166,13 +199,19 @@
                                             <option>New York</option>
                                             <option>New Jersey</option>
                                         </select>
+                                        <div class="invalid-feedback">
+                                            Please enter your state.
+                                        </div>
                                     </div>
                                 </div>
     
                                 <!--Zip-->
                                 <div class="col-md-4">
                                     <label for="zip">ZipCode:</label><br>
-                                    <input class="form-control" type="text" id="shipzip" name="zip" placeholder="ZipCode"><br>
+                                    <input class="form-control" type="number" id="shipzip" name="zip" placeholder="ZipCode">
+                                    <div class="invalid-feedback">
+                                        Please enter your zip.
+                                    </div>
                                 </div>
                             </div>
 
@@ -182,8 +221,6 @@
                             <label class="form-check-label" for="save-info">Save this information for next time</label>
                         </div>
 
-
-                        
                         <br>
                         <br>
                         <hr>
@@ -210,6 +247,7 @@
                             </label>
                         </div>
                         
+                        
                         <hr>
                         
 
@@ -218,11 +256,16 @@
                             <div class="col"> <!--Name on card-->
                                 <label for="card-name">Name on card:</label><br>
                                 <input class="form-control" id="card-name" type="text" required>
-
+                                <div class="invalid-feedback">
+                                    Please enter your name.
+                                </div>
                             </div>
                             <div class="col"> <!--Credit card number-->
                                 <label for="card-number">Credit Card Number:</label><br>
                                 <input class="form-control" id="card-number" type="text" required>
+                                <div class="invalid-feedback">
+                                    Please enter your credit card number.
+                                </div>
                             </div>
                         </div>
                         <br>
@@ -230,10 +273,16 @@
                             <div class="col"><!--Expiration-->
                                 <label for="expiration">Expiration:</label><br>
                                 <input class="form-control" id="expiration" type="text" required>
+                                <div class="invalid-feedback">
+                                    Please enter your expiration.
+                                </div>
                             </div>
                             <div class="col"><!--CVV-->
                                 <label for="cvv">CVV:</label><br>
                                 <input class="form-control" id="cvv" type="text" required>
+                                <div class="invalid-feedback">
+                                    Please enter your CVV.
+                                </div>
                             </div>
                         </div>
                     <br>
