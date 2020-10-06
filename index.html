@@ -90,19 +90,16 @@
                         <br>
                         <br>
 
-                        <div class="row">
-                            <!----Seperate the two fields-->
-                            
-                                <div class="col-md-6"><!--Shipping address is same checkbox-->
-                                    <input class="form-control" type="checkbox" id="ship-addr" name="ship-addr" required>
-                                    <label for="ship-addr">Shipping address is the same as my billing address</label>
-                                </div>
-                                <div class="col-md-6"><!--Save information-->
-                                    <input class="form-control" type="checkbox" id="save-info" name="save-info" required>
-                                    <label for="save-info">Save this information for next time</label>
-                                </div>
-                        
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="ship-addr" required>
+                            <label class="form-check-label" for="ship-addr">Shipping address is the same as my billing address</label>
                         </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="save-info" required>
+                            <label class="form-check-label" for="save-info">Save this information for next time</label>
+                        </div>
+
+                        
                         <br>
                         <h1>Payment</h1>
                         <div class="row">
