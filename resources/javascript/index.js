@@ -5,9 +5,14 @@ function myFunction(){
         var hide = document.getElementById('ship');
         hide.style.display = "none";
     }
-    else{
+    else{ //when not clicked make required
         var show = document.getElementById('ship');
         show.style.display = "block";
+        var shipvalidate = document.getElementById('ship-address').value;
+        if (shipvalidate==""){
+            
+        }
+        
     }
     
 }
