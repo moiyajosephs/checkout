@@ -24,33 +24,33 @@
                             <!--First name-->
                             <div class= "col-md-6"> 
                                 <label for="fname">First name:</label><br>
-                                <input type="text" id="fname" name="fname" value="" required>
+                                <input class="form-control" type="text" id="fname" name="fname" value="" required>
                             </div>
                             <!--Last Name-->
                             <div class="col-md-6">
                                 <label for="lname">Last name:</label><br>
-                                <input type="text" id="lname" name="lname" value="" required><br><br>
+                                <input class="form-control" type="text" id="lname" name="lname" value="" required><br><br>
                             </div>
                         </div>
 
                         <!--Username-->
                         <div class="row-md-12">
                             <label for="username">Username:</label><br>
-                            <input type="text" id="username" name="username" value="" required><br>
+                            <input class="form-control" type="text" id="username" name="username" value="" required><br>
                         </div>
                         <br>
                         <!--Email-->
                         <div class="row-md-12">
                             <label for="email">Email:</label><br>
-                            <input type="text" id="email" name="email" value=""><br>
+                            <input class="form-control" type="text" id="email" name="email" value=""><br>
                         </div>
                         <br>
                         <!--Address-->
                         <div class="row-md-12">
                             <label for="address">Address</label><br>
-                            <input type="text" id="address" required><br>
+                            <input class="form-control" type="text" id="address" required><br>
                             <label for="address2">Address 2(Optional)</label><br>
-                            <input type="text" id="address2">
+                            <input class="form-control" type="text" id="address2">
                         </div>
                         <br>
                         <!--Location-->
@@ -78,7 +78,7 @@
                             <!--Zip-->
                             <div class="col-md-4">
                                 <label for="zip">ZipCode</label><br>
-                                <input type="text" id="zip" name="zip" value="" required><br>
+                                <input class="form-control" type="text" id="zip" name="zip" value="" required><br>
                             </div>
                         </div>
                         <br>
@@ -88,11 +88,11 @@
                             <!----Seperate the two fields-->
                             
                                 <div class="col-md-6"><!--Shipping address is same checkbox-->
-                                    <input type="checkbox" id="ship-addr" name="ship-addr" required>
+                                    <input class="form-control" type="checkbox" id="ship-addr" name="ship-addr" required>
                                     <label for="ship-addr">Shipping address is the same as my billing address</label>
                                 </div>
                                 <div class="col-md-6"><!--Save information-->
-                                    <input type="checkbox" id="save-info" name="save-info" required>
+                                    <input class="form-control" type="checkbox" id="save-info" name="save-info" required>
                                     <label for="save-info">Save this information for next time</label>
                                 </div>
                         
@@ -104,18 +104,21 @@
                             <!--Payment information-->
                             <!--Credit-->
                             <div class="col">
-                                <input id="credit" name="payment" type="radio" required>
-                                <label for="credit">Credit Card</label>
+                                <label class="form-check-label">
+                                    <input class="form-check-input" id="credit" name="payment" type="radio" required>Credit
+                                </label>
                             </div>
                             <!--Debit-->
                             <div class="col">
-                                <input id="debit" name="payment" type="radio" required>
-                                <label for="credit">Debit Card</label>
+                                <label class="form-check-label">
+                                    <input class="form-check-input" id="debit" name="payment" type="radio" required>Debit Card
+                                </label>
                             </div>
                             <!--Paypal-->
                             <div class="col">
-                                <input id="paypal" name="payment" type="radio" required>
-                                <label for="paypal">Paypal</label>
+                                <label class="form-check-label">
+                                    <input class="form-check-input" id="paypal" name="payment" type="radio" required> Paypal
+                                </label>
                             </div>
                         </div>
 
@@ -125,23 +128,23 @@
                         <div class="row">
                             <div class="col"> <!--Name on card-->
                                 <label for="card-name">Name on card</label><br>
-                                <input id="card-name" type="text" required>
+                                <input class="form-control" id="card-name" type="text" required>
 
                             </div>
                             <div class="col"> <!--Credit card number-->
                                 <label for="card-number">Credit Card Number</label><br>
-                                <input id="card-number" type="text" required>
+                                <input class="form-control" id="card-number" type="text" required>
                             </div>
                         </div>
                         <br>
                         <div class="row">
                             <div class="col"><!--Expiration-->
                                 <label for="expiration">Expiration</label><br>
-                                <input id="expiration" type="text" required>
+                                <input class="form-control" id="expiration" type="text" required>
                             </div>
                             <div class="col"><!--CVV-->
                                 <label for="cvv">CVV</label><br>
-                                <input id="cvv" type="text" required>
+                                <input class="form-control" id="cvv" type="text" required>
                             </div>
                         </div>
                     <br>
