@@ -1,109 +1,249 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <h1>Checkout</h1>
         <title>Checkout</title>
+        <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTQJ1IRfa4qbcf2nllACPwuTWIwUESecIot3bYbyEDV-gWUXM_M26k5N8k6OdcK2QquOiKayQcn&usqp=CAc"
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <img class="d-block mx-auto" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTQJ1IRfa4qbcf2nllACPwuTWIwUESecIot3bYbyEDV-gWUXM_M26k5N8k6OdcK2QquOiKayQcn&usqp=CAc" alt width="72" height="72">
+        <script type="text/javascript" src="resources/javascript/index.js"></script>
+        <h1 class="text-center text-primary display-2">Checkout</h1>
     </head>
 
-
+    <h1>Example</h1>
     <body>
-        <form>
-            <div class= "name" >
-                <div class= "fname">
-                    <label for="fname">First name:</label><br>
-                    <input type="text" id="fname" name="fname" value="" required>
-                </div>
-                <div class="lname">
-                    <label for="lname">Last name:</label><br>
-                    <input type="text" id="lname" name="lname" value="" required><br><br>
-                </div>
-            </div>
-            <div class="username">
-                <label for="username">Username:</label><br>
-                <input type="text" id="username" name="username" value="" required><br>
-            </div>
-            <div class="email">
-                <label for="email">Email:</label><br>
-                <input type="text" id="email" name="email" value=""><br>
-            </div>
-            <div class="address">
-                <label for="address">Address</label>
-                <input type="text" id="address" required><br>
-                <label for="address2">Address 2(Optional)</label>
-                <input type="text" id="address2">
-            </div>
-            <div class="location">
-                <div> <!--Country-->
-                    <label for="country">Country</label>
-                    <select id="country">
-                        <option value>Choose...</option>
-                        <option>United States</option>
-                        <option>Canada</option>
-                    </select>
-                </div>
-                <div> <!--State-->
-                    <label for="state">State</label>
-                    <select id="state">
-                        <option value>Choose...</option>
-                        <option>New York</option>
-                        <option>New Jersey</option>
-                    </select>
-                </div>
-                <div> <!--Zip-->
-                    <label for="zip">ZipCode</label>
-                    <input type="text" id="zip" name="zip" value="" required><br>
-                </div>
-                <!----Seperate the two fields-->
-                <div>
-                    <div><!--Shipping address is same checkbox-->
-                        <input type="checkbox" id="ship-addr" name="ship-addr" required>
-                        <label for="ship-addr">Shipping address is the same as my billing address</label>
-                    </div>
-                    <div><!--Save information-->
-                        <input type="checkbox" id="save-info" name="save-info" required>
-                        <label for="save-info">Save this information for next time</label>
-                    </div>
-                </div>
-                <!--Payment information-->
-                <div class="Credit">
-                    <input id="credit" name="payment" type="radio" required>
-                    <label for="credit">Credit Card</label>
-                </div>
-                <div class="Debit">
-                    <input id="debit" name="payment" type="radio" required>
-                    <label for="credit">Debit Card</label>
-                </div>
-                <div class="Paypal">
-                    <input id="paypal" name="payment" type="radio" required>
-                    <label for="paypal">Paypal</label>
-                </div>
-                <div class="card-name">
-                    <div> <!--Name on card-->
-                        <label for="card-name">Name on card</label>
-                        <input id="card-name" type="text" required>
+        <form class="needs-validation">
+            <div class ="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h2 class="text-primary">Your Cart</h2>
 
-                    </div>
-                    <div> <!--Credit card number-->
-                        <label for="card-number">Credit Card Number</label>
-                        <input id="card-number" type="text" required>
-                    </div>
-                </div>
-                <div class="card-info">
-                    <div><!--Expiration-->
-                        <label for="expiration">Expiration</label>
-                        <input id="expiration" type="text" required>
-                    </div>
-                    <div><!--CVV-->
-                        <label for="cvv">CVV</label>
-                        <input id="cvv" type="text" required>
-                    </div>
-                </div>
-            </div>
-            <!--Submit Button-->
-            <div>
-                <button class="submit-button" type="submit">Continue to checkout</button>
-            </div>
+                        <table class="table table-hover border border-light-3">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Product</th>
+                                    <th scope="col">$</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Chicken</td>
+                                    <td>3.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Noodle</td>
+                                    <td>1.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Soup</td>
+                                    <td>300.0</td>
+                                </tr>
 
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th scope="col">Total</th>
+                                    <th scope="col"> </th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <div class="col-md-8">
+                        <h2 class="text-primary">Billing Address</h1>
+                        <label for="name">Name:</label><br>
+                        <div class= "row" > <!--First Name, Last Name-->
+                            <div class="col-md-12 input-group mb-3">
+                                <input type="text" id="name" class="form-control" placeholder="First Name" required>
+                                <input type="text" id ="name" class="form-control" placeholder="Last Name" required>
+                            </div>
+        
+                        </div>
+
+                        <!--Username-->
+                        <div class="row-md-12">
+                            <label for="username">Username:</label><br>
+                            <input class="form-control" type="text" id="username" name="username" placeholder="Username" required>
+                        </div>
+                        <br>
+                        <!--Email-->
+                        <div class="row-md-12">
+                            <label for="email">Email:</label>
+                            <div class="input-group mb-3">   
+                                <input class="form-control" type="text" id="email" name="email" placeholder="Email">
+                                <div class="input-group-append">
+                                    <span class="input-group-text border-left-1 rounded-right">@example.com</span>
+                                </div>
+                                <br>
+                            </div>
+                        </div>
+                        <br>
+                        <!--Address-->
+                        <div class="row-md-12">
+                            <label for="address">Address:</label><br>
+                            <input class="form-control" type="text" id="address" required><br>
+                            <label for="address2">Address 2(Optional)</label><br>
+                            <input class="form-control" type="text" id="address2" placeholder="Apt. or Suite">
+                        </div>
+                        <br>
+                        <!--Location-->
+                        <div class="row">
+                            <!--Country-->
+                            <div class="col-md-4"> 
+                                <div class="form-group">
+                                    <label for="country">Country:</label><br>
+                                    <select class="form-control" id="country">
+                                        <option value>Choose...</option>
+                                        <option>United States</option>
+                                        <option>Canada</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!--State-->
+                            <div class= "col-md-4"> 
+                                <div>
+                                    <label for="state">State:</label><br>
+                                    <select class="form-control" id="state">
+                                        <option value>Choose...</option>
+                                        <option>New York</option>
+                                        <option>New Jersey</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!--Zip-->
+                            <div class="col-md-4">
+                                <label for="zip">ZipCode:</label><br>
+                                <input class="form-control" type="text" id="zip" name="zip" placeholder="ZipCode" required><br>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <hr>
+                        <br>
+                        
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="ship-addr" onchange="myFunction()"/>
+                            <label class="form-check-label" for="ship-addr">Shipping address is the same as my billing address</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="save-info">
+                            <label class="form-check-label" for="save-info">Save this information for next time</label>
+                        </div>
+
+                        <br>
+
+                        <div class="form-check" id="ship">
+                            <h3 class="text-primary">Shipping Address:</h3>
+                            <div class="row-md-12">
+                                <label for="address">Address:</label><br>
+                                <input class="form-control" type="text" id="ship-address" value=""><br>
+                                <label for="address2">Address 2(Optional)</label><br>
+                                <input class="form-control" type="text" id="address2" placeholder="Apt. or Suite">
+                            </div>
+                            <br>
+                            <!--Location-->
+                            <div class="row">
+                                <!--Country-->
+                                <div class="col-md-4"> 
+                                    <div class="form-group">
+                                        <label for="country">Country:</label><br>
+                                        <select class="form-control" id="country">
+                                            <option value>Choose...</option>
+                                            <option>United States</option>
+                                            <option>Canada</option>
+                                        </select>
+                                    </div>
+                                </div>
+    
+                                <!--State-->
+                                <div class= "col-md-4" > 
+                                    <div>
+                                        <label for="state">State:</label><br>
+                                        <select class="form-control" id="state">
+                                            <option value>Choose...</option>
+                                            <option>New York</option>
+                                            <option>New Jersey</option>
+                                        </select>
+                                    </div>
+                                </div>
+    
+                                <!--Zip-->
+                                <div class="col-md-4">
+                                    <label for="zip">ZipCode:</label><br>
+                                    <input class="form-control" type="text" id="ship-zip" name="zip" placeholder="ZipCode"><br>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        
+                        <br>
+                        <br>
+                        <hr>
+                        <h2 class="text-primary">Payment</h1>
+                        
+
+                        <!--Payment information-->
+                        <!--Credit-->
+                        <div class="col">
+                            <label class="form-check-label">
+                                <input class="form-check-input" id="credit" name="payment" type="radio" required>Credit
+                            </label>
+                        </div>
+                            <!--Debit-->
+                        <div class="col">
+                            <label class="form-check-label">
+                                <input class="form-check-input" id="debit" name="payment" type="radio" required>Debit Card
+                            </label>
+                        </div>
+                            <!--Paypal-->
+                        <div class="col">
+                            <label class="form-check-label">
+                                <input class="form-check-input" id="paypal" name="payment" type="radio" required> Paypal
+                            </label>
+                        </div>
+                        
+                        <hr>
+                        
+
+                        <!--Card-->
+                        <div class="row">
+                            <div class="col"> <!--Name on card-->
+                                <label for="card-name">Name on card:</label><br>
+                                <input class="form-control" id="card-name" type="text" required>
+
+                            </div>
+                            <div class="col"> <!--Credit card number-->
+                                <label for="card-number">Credit Card Number:</label><br>
+                                <input class="form-control" id="card-number" type="text" required>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col"><!--Expiration-->
+                                <label for="expiration">Expiration:</label><br>
+                                <input class="form-control" id="expiration" type="text" required>
+                            </div>
+                            <div class="col"><!--CVV-->
+                                <label for="cvv">CVV:</label><br>
+                                <input class="form-control" id="cvv" type="text" required>
+                            </div>
+                        </div>
+                    <br>
+                    <hr>
+                        <!--Submit Button-->
+                        <div>
+                            <button class="btn btn-primary" type="submit">Continue to checkout</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </form>
 
     </body>
